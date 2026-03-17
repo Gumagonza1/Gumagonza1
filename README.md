@@ -13,23 +13,100 @@
 
 ---
 
-## 🏗️ Ecosistema Aragón
+## 🏗️ Aragón Ecosystem
 
 A fully custom automation platform I built from scratch to digitalize a family restaurant. Every module is in production, handling real orders, invoices, and customers daily.
 
 ```
+Customer
+  ├── WhatsApp ──────────► tacos-aragon-bot       (Gemini + Loyverse POS)
+  │                              │
+  │                         tacos-aragon-monitor  ← Claude audits every bot response in real time
+  │                         (tool use: logs, conversations, proposes fixes to admin)
+  │
+  ├── Phone call ─────────► tacos-aragon-llamadas  (Twilio + Google STT/TTS)
+  ├── Mobile app ─────────► tacos-aragon-app       (React Native + Expo)
+  │                          via tacos-aragon-api  (Claude agent + tool use)
+  ├── Website ────────────► tacos-aragon-web       (Flask + CFDI 4.0)
+  └── Tax / SAT ──────────► tacos-aragon-fiscal    (cfdiclient + Gemini)
+                             cfo-aragon-agent       (Claude + FastAPI)
+```
+
+| Repo | Stack | Description |
+|------|-------|-------------|
+| [ecosistema-aragon](https://github.com/Gumagonza1/ecosistema-aragon) | — | Full system architecture overview |
+| [whatsapp-tacos-bot](https://github.com/Gumagonza1/whatsapp-tacos-bot) | Node.js · Gemini · whatsapp-web.js | Natural-language ordering bot + POS integration |
+| [tacos-aragon-monitor](https://github.com/Gumagonza1/tacos-aragon-monitor) | Node.js · Claude · Tool Use | Real-time quality audit agent for the WhatsApp bot |
+| [tacos-aragon-llamadas](https://github.com/Gumagonza1/tacos-aragon-llamadas) | Node.js · Twilio · Google STT/TTS | Voice bot for phone orders |
+| [tacos-aragon-api](https://github.com/Gumagonza1/tacos-aragon-api) | Node.js · Claude · Loyverse · Facturama | Central API + agentic tool use |
+| [tacos-aragon-app](https://github.com/Gumagonza1/tacos-aragon-app) | React Native · Expo · Gemini STT | Internal mobile app with voice + sales dashboard |
+| [tacos-aragon-web](https://github.com/Gumagonza1/tacos-aragon-web) | Python · Flask · CFDI 4.0 | Electronic invoicing portal |
+| [tacos-aragon-fiscal](https://github.com/Gumagonza1/tacos-aragon-fiscal) | Python · cfdiclient · SAT | Bulk SAT download and CFDI analysis |
+| [cfo-aragon-agent](https://github.com/Gumagonza1/cfo-aragon-agent) | FastAPI · Claude · Gemini | Automated CFO: P&L, VAT/ISR, balance sheet |
+| [bot-loyverse](https://github.com/Gumagonza1/bot-loyverse) | Python · pandas · matplotlib | Analytics and reports from Loyverse POS |
+
+---
+
+## 🧠 Stack
+
+**Backend**
+`Python` `Flask` `FastAPI` `Node.js` `Express`
+
+**AI / Agents**
+`Claude (Anthropic)` `Gemini (Google)` `Tool Use` `Agentic Loops` `STT/TTS`
+
+**Integrations**
+`Loyverse POS` `Facturama PAC` `SAT CFDI 4.0` `WhatsApp API` `Twilio` `MercadoPago`
+
+**Infra**
+`GCP VM` `Windows Server 2022` `IIS` `NSSM` `PM2` `Let's Encrypt` `SQLite` `PostgreSQL`
+
+**Mobile**
+`React Native` `Expo` `EAS Build`
+
+---
+
+## 🚀 In Production
+
+- ✅ WhatsApp bot taking orders 24/7
+- ✅ **Real-time audit agent**: Claude reviews every bot message, detects errors (wrong prices, unavailable items, tone) and proposes fixes to the admin via WhatsApp (`!m si` / `!m no`)
+- ✅ Electronic invoicing CFDI 4.0 from the website
+- ✅ Internal mobile app with voice agent (Claude + Gemini STT)
+- ✅ CFO agent: automatic SAT download + AI-powered tax analysis
+- ✅ `app.tacosaragon.com.mx` running on GCP with SSL
+
+---
+
+## 📍 Context
+
+I'm a restaurant owner and self-taught developer. Since 2020 I've digitalized Tacos Aragón by building every tool myself — no team, from my phone, all running in production.
+
+> *Building AI for the businesses that actually run Mexico.*
+
+---
+---
+
+<div align="center"><b>🇲🇽 Versión en Español</b></div>
+
+---
+
+## 🏗️ Ecosistema Aragón
+
+Plataforma de automatización construida desde cero para digitalizar un restaurante familiar. Cada módulo está en producción, procesando pedidos, facturas y clientes reales todos los días.
+
+```
 Cliente
-  ├── WhatsApp ──────────► tacos-aragon-bot      (Gemini + Loyverse POS)
+  ├── WhatsApp ──────────► tacos-aragon-bot       (Gemini + Loyverse POS)
   │                              │
   │                         tacos-aragon-monitor  ← Claude audita cada respuesta en tiempo real
   │                         (tool use: logs, conversaciones, propone fixes al admin)
   │
   ├── Llamada telefónica ► tacos-aragon-llamadas  (Twilio + Google STT/TTS)
-  ├── App móvil ──────────► tacos-aragon-app      (React Native + Expo)
+  ├── App móvil ──────────► tacos-aragon-app       (React Native + Expo)
   │                          via tacos-aragon-api  (Claude agent + tool use)
-  ├── Sitio web ──────────► tacos-aragon-web      (Flask + CFDI 4.0)
-  └── SAT / Fiscal ───────► tacos-aragon-fiscal   (cfdiclient + Gemini)
-                             cfo-aragon-agent      (Claude + FastAPI)
+  ├── Sitio web ──────────► tacos-aragon-web       (Flask + CFDI 4.0)
+  └── SAT / Fiscal ───────► tacos-aragon-fiscal    (cfdiclient + Gemini)
+                             cfo-aragon-agent       (Claude + FastAPI)
 ```
 
 | Repo | Stack | Descripción |
@@ -47,25 +124,6 @@ Cliente
 
 ---
 
-## 🧠 Stack
-
-**Backend**
-`Python` `Flask` `FastAPI` `Node.js` `Express`
-
-**AI / Agents**
-`Claude (Anthropic)` `Gemini (Google)` `Tool Use` `Agentic Loops` `STT/TTS`
-
-**Integraciones**
-`Loyverse POS` `Facturama PAC` `SAT CFDI 4.0` `WhatsApp API` `Twilio` `MercadoPago`
-
-**Infra**
-`GCP VM` `Windows Server 2022` `IIS` `NSSM` `PM2` `Let's Encrypt` `SQLite` `PostgreSQL`
-
-**Mobile**
-`React Native` `Expo` `EAS Build`
-
----
-
 ## 🚀 En producción
 
 - ✅ Bot WhatsApp tomando pedidos 24/7
@@ -73,7 +131,7 @@ Cliente
 - ✅ Facturación electrónica CFDI 4.0 desde el sitio web
 - ✅ App móvil interna con agente de voz (Claude + Gemini STT)
 - ✅ CFO agent: descarga SAT automática + análisis fiscal con IA
-- ✅ Infrastructure: `app.tacosaragon.com.mx` en GCP con SSL
+- ✅ `app.tacosaragon.com.mx` en GCP con SSL
 
 ---
 
@@ -81,7 +139,7 @@ Cliente
 
 Soy restaurantero y desarrollador. Desde 2020 digitalicé Tacos Aragón construyendo cada herramienta yo mismo — sin equipo, desde el celular, en producción real.
 
-> *Building AI for the businesses that actually run Mexico.*
+> *Construyendo IA para los negocios que realmente mueven México.*
 
 ---
 
