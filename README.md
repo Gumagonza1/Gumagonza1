@@ -30,6 +30,12 @@ Customer
   ├── Website ────────────► tacos-aragon-web       (Flask + CFDI 4.0)
   └── Tax / SAT ──────────► tacos-aragon-fiscal    (cfdiclient + Gemini)
                              cfo-aragon-agent       (Claude + FastAPI)
+
+                    ┌──────────────────────────────┐
+All agents ────────►│  orchestrator  (Dockerized)   │──► Owner (WhatsApp)
+                    │  integrity · endpoints · logs  │
+                    │  anomalies · cross-agent health │
+                    └──────────────────────────────┘
 ```
 
 | Repo | Stack | Description |
@@ -44,6 +50,7 @@ Customer
 | [tacos-aragon-fiscal](https://github.com/Gumagonza1/tacos-aragon-fiscal) | Python · cfdiclient · SAT | Bulk SAT download and CFDI analysis |
 | [cfo-aragon-agent](https://github.com/Gumagonza1/cfo-aragon-agent) | FastAPI · Claude · Gemini | Automated CFO: P&L, VAT/ISR, balance sheet |
 | [bot-loyverse](https://github.com/Gumagonza1/bot-loyverse) | Python · pandas · matplotlib | Analytics and reports from Loyverse POS |
+| orchestrator *(in development)* | Docker · Claude · FastAPI | Central orchestrator: agent integrity, endpoint health, anomaly detection |
 
 ---
 
@@ -74,6 +81,7 @@ Customer
 - ✅ Internal mobile app with voice agent (Claude + Gemini STT)
 - ✅ CFO agent: automatic SAT download + AI-powered tax analysis
 - ✅ `app.tacosaragon.com.mx` running on GCP with SSL
+- 🔧 **Dockerized orchestrator** *(in development)*: central agent that verifies integrity and communication between all agents, monitors endpoints, server health, and code anomalies — all agents report to it, it reports directly to the owner via WhatsApp
 
 ---
 
@@ -107,6 +115,12 @@ Cliente
   ├── Sitio web ──────────► tacos-aragon-web       (Flask + CFDI 4.0)
   └── SAT / Fiscal ───────► tacos-aragon-fiscal    (cfdiclient + Gemini)
                              cfo-aragon-agent       (Claude + FastAPI)
+
+                    ┌──────────────────────────────────┐
+Todos los agentes ─►│  orquestador  (Dockerizado)       │──► Admin (WhatsApp)
+                    │  integridad · endpoints · logs     │
+                    │  anomalías · salud entre agentes   │
+                    └──────────────────────────────────┘
 ```
 
 | Repo | Stack | Descripción |
@@ -121,6 +135,7 @@ Cliente
 | [tacos-aragon-fiscal](https://github.com/Gumagonza1/tacos-aragon-fiscal) | Python · cfdiclient · SAT | Descarga masiva y análisis de CFDIs |
 | [cfo-aragon-agent](https://github.com/Gumagonza1/cfo-aragon-agent) | FastAPI · Claude · Gemini | CFO automatizado: P&L, ISR/IVA, balance |
 | [bot-loyverse](https://github.com/Gumagonza1/bot-loyverse) | Python · pandas · matplotlib | Analytics y reportes desde Loyverse POS |
+| orquestador *(en desarrollo)* | Docker · Claude · FastAPI | Orquestador central: integridad de agentes, salud de endpoints, detección de anomalías |
 
 ---
 
@@ -132,6 +147,7 @@ Cliente
 - ✅ App móvil interna con agente de voz (Claude + Gemini STT)
 - ✅ CFO agent: descarga SAT automática + análisis fiscal con IA
 - ✅ `app.tacosaragon.com.mx` en GCP con SSL
+- 🔧 **Orquestador dockerizado** *(en desarrollo)*: agente central que verifica integridad y comunicación entre todos los agentes, monitorea endpoints, salud del servidor y anomalías en código — todos los agentes le reportan a él, y él me reporta directamente vía WhatsApp
 
 ---
 
