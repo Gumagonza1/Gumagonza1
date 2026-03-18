@@ -8,7 +8,6 @@
 
 [![Portfolio](https://img.shields.io/badge/portfolio-gumaro.dev.tacosaragon.com.mx-00e5ff?style=flat-square&logo=googlechrome&logoColor=black)](https://gumaro.dev.tacosaragon.com.mx)
 [![Website](https://img.shields.io/badge/tacosaragon.com.mx-live-00ff88?style=flat-square&logo=googlechrome&logoColor=black)](https://tacosaragon.com.mx)
-[![App](https://img.shields.io/badge/app.tacosaragon.com.mx-live-00ff88?style=flat-square&logo=googlechrome&logoColor=black)](https://app.tacosaragon.com.mx)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Gumaro_González-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/gumaro-antonio-gonz%C3%A1lez-arag%C3%B3n-57644b159)
 [![Email](https://img.shields.io/badge/email-gumaro.gonzalez@tacosaragon.com.mx-a855f7?style=flat-square&logo=gmail&logoColor=white)](mailto:gumaro.gonzalez@tacosaragon.com.mx)
 
