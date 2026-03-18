@@ -85,14 +85,17 @@ All services ──────►│  orchestrator  (Dockerized)      │──
 | Repo | Stack | Description |
 |------|-------|-------------|
 | [ecosistema-aragon](https://github.com/Gumagonza1/ecosistema-aragon) | — | Full system architecture |
-| [tacos-aragon-bot](https://github.com/Gumagonza1/tacos-aragon-bot) | Node.js · whatsapp-web.js · Google STT | NLP ordering bot + voice recognition |
+| [Tacos Aragón bot](https://github.com/Gumagonza1/whatsapp-tacos-bot) | Node.js · whatsapp-web.js · Google STT | NLP ordering bot + voice recognition |
 | [tacos-aragon-api](https://github.com/Gumagonza1/tacos-aragon-api) | Node.js · Express · Agentic SDK | Central API with agentic tool use |
 | [tacos-aragon-app](https://github.com/Gumagonza1/tacos-aragon-app) | React Native · Expo · EAS | Internal mobile dashboard |
 | [tacos-aragon-web](https://github.com/Gumagonza1/tacos-aragon-web) | Python · Flask · CFDI 4.0 | Website + electronic invoicing |
 | [tacos-aragon-fiscal](https://github.com/Gumagonza1/tacos-aragon-fiscal) | Python · cfdiclient · SAT SOAP | Bulk SAT CFDI download + fiscal analysis |
 | [tacos-aragon-llamadas](https://github.com/Gumagonza1/tacos-aragon-llamadas) | Node.js · Twilio · Google STT/TTS | Automated voice ordering |
 | [tacos-aragon-wp](https://github.com/Gumagonza1/tacos-aragon-wp) | PHP · WordPress · Facturama | WP plugin: invoicing + Loyverse sync |
-| [tacos-aragon-orchestrator](https://github.com/Gumagonza1/ecosistema-aragon) | Docker · Node.js · SQLite | Self-healing orchestrator + reasoning engine |
+| [tacos-aragon-orchestrator](https://github.com/Gumagonza1/ecosistema-aragon/tree/main/tacos-aragon-orchestrator) | Docker · Node.js · SQLite | Self-healing orchestrator + reasoning engine |
+| [telegram-dispatcher](https://github.com/Gumagonza1/ecosistema-aragon/tree/main/telegram-dispatcher) | Node.js · Telegram Bot API · SQLite | Admin notification hub with approval buttons |
+| [tacos-aragon-monitor](https://github.com/Gumagonza1/tacos-aragon-monitor) | Node.js · SQLite · Telegram | Real-time health monitor + uptime alerts |
+| cfo-aragon-agent | Python · Anthropic API · Loyverse | AI CFO agent — P&L, SAT cross-reference *(private)* |
 
 ---
 
@@ -192,14 +195,17 @@ Todos los servicios►│  orquestador  (Dockerizado)      │──► Admin (T
 | Repo | Stack | Descripción |
 |------|-------|-------------|
 | [ecosistema-aragon](https://github.com/Gumagonza1/ecosistema-aragon) | — | Arquitectura general del sistema |
-| [tacos-aragon-bot](https://github.com/Gumagonza1/tacos-aragon-bot) | Node.js · whatsapp-web.js · Google STT | Bot de pedidos NLP + reconocimiento de voz |
+| [Tacos Aragón bot](https://github.com/Gumagonza1/whatsapp-tacos-bot) | Node.js · whatsapp-web.js · Google STT | Bot de pedidos NLP + reconocimiento de voz |
 | [tacos-aragon-api](https://github.com/Gumagonza1/tacos-aragon-api) | Node.js · Express · Agentic SDK | API central con agentic tool use |
 | [tacos-aragon-app](https://github.com/Gumagonza1/tacos-aragon-app) | React Native · Expo · EAS | Dashboard móvil interno |
 | [tacos-aragon-web](https://github.com/Gumagonza1/tacos-aragon-web) | Python · Flask · CFDI 4.0 | Sitio web + facturación electrónica |
 | [tacos-aragon-fiscal](https://github.com/Gumagonza1/tacos-aragon-fiscal) | Python · cfdiclient · SAT SOAP | Descarga masiva CFDI + análisis fiscal |
 | [tacos-aragon-llamadas](https://github.com/Gumagonza1/tacos-aragon-llamadas) | Node.js · Twilio · Google STT/TTS | Pedidos por llamada automática |
 | [tacos-aragon-wp](https://github.com/Gumagonza1/tacos-aragon-wp) | PHP · WordPress · Facturama | Plugin WP: facturación + Loyverse |
-| [tacos-aragon-orchestrator](https://github.com/Gumagonza1/ecosistema-aragon) | Docker · Node.js · SQLite | Orquestador auto-recuperable + motor de razonamiento |
+| [tacos-aragon-orchestrator](https://github.com/Gumagonza1/ecosistema-aragon/tree/main/tacos-aragon-orchestrator) | Docker · Node.js · SQLite | Orquestador auto-recuperable + motor de razonamiento |
+| [telegram-dispatcher](https://github.com/Gumagonza1/ecosistema-aragon/tree/main/telegram-dispatcher) | Node.js · Telegram Bot API · SQLite | Hub de notificaciones con botones de aprobación |
+| [tacos-aragon-monitor](https://github.com/Gumagonza1/tacos-aragon-monitor) | Node.js · SQLite · Telegram | Monitor de salud en tiempo real + alertas de uptime |
+| cfo-aragon-agent | Python · Anthropic API · Loyverse | Agente CFO con IA — P&L, cruces SAT *(privado)* |
 
 ---
 
