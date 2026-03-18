@@ -29,6 +29,8 @@
 **AI & Cloud**
 
 ![Intelligent Agents](https://img.shields.io/badge/Intelligent_Agents-agentic_loops-00e5ff?style=flat-square)
+![Anthropic API](https://img.shields.io/badge/Anthropic_API-000000?style=flat-square&logo=anthropic&logoColor=white)
+![Google AI API](https://img.shields.io/badge/Google_AI_API-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![Google Cloud STT](https://img.shields.io/badge/Google_Cloud-STT%2FTTS-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![NLP](https://img.shields.io/badge/NLP-processing-a855f7?style=flat-square)
 
@@ -134,6 +136,8 @@ Restaurant owner and self-taught developer. Since 2020 I've built every tool mys
 **IA & Cloud**
 
 ![Agentes Inteligentes](https://img.shields.io/badge/Agentes_Inteligentes-agentic_loops-00e5ff?style=flat-square)
+![Anthropic API](https://img.shields.io/badge/Anthropic_API-000000?style=flat-square&logo=anthropic&logoColor=white)
+![Google AI API](https://img.shields.io/badge/Google_AI_API-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![Google Cloud STT](https://img.shields.io/badge/Google_Cloud-STT%2FTTS-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![NLP](https://img.shields.io/badge/NLP-procesamiento-a855f7?style=flat-square)
 
